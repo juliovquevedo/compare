@@ -1,32 +1,25 @@
-<!doctype htlm>
+<?php
+$buyOneItemPrice = filter_input(INPUT_POST, 'buyoneprice');
+$buyOneItemPrice2 = filter_input(INPUT_POST, 'buysecondprice');
+$buyOneItems = filter_input(INPUT_POST, 'itembought');
+$buyOneItemDeal = filter_input(INPUT_POST, 'getthisdeal');
+$buyOneDiscount = filter_input(INPUT_POST, 'discount');
+$firstDeal = 100 - ($buyOneItemPrice * $buyOneItems + ($buyOneItemPrice2 * $buyOneItemDeal * $buyOneDiscount / 100)) / ($buyOneItemPrice * $buyOneItems + $buyOneItemPrice2 * $buyOneItemDeal) * 100;
+$buyOneSavings = ($buyOneItemPrice * $buyOneItems + $buyOneItemPrice2 * $buyOneItemDeal) * $firstDeal / 100;
+?>
+
+<!doctype html>
 <html>
     <head>
-        <title>Compare Deals</title>
         <meta charset="utf-8"/>
+        <title>Compare Deals</title>
     </head>
     <body>
-        <main>
-            <form oninput="y.value=parseInt(discount.value)">
-                <fieldset>
-                    <legend>Buy One get One...</legend>
-                    <label>Item Price</label>
-                    <input type="text"><br>
-                    <label>Buy</label>
-                    <input type="number" value="1"><br>
-                    <label>Get One</label>
-                    <input name="discount" type="range" min="0" max="100">
-                    <output name="y" for="discount"></output>
-                    <label>% Off</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Percent discount</legend>
-                    <label>Item Price</label>
-                    <input type="text"><br>
-                    <label>Discount</label>
-                    <input type="number">
-                </fieldset>
-                <input type="submit" value="Compare">
-            </form>
-        </main>
+        <p><?php echo $buyOneItemPrice ?></p>
+        <p><?php echo $buyOneItems ?></p>
+        <p><?php echo $buyOneItemDeal ?></p>
+        <p><?php echo $buyOneDiscount ?></p>
+        <p><?php echo $firstDeal . " percent off."?></p>
+        <p><?php echo "You save " . $buyOneSavings ?></p>
     </body>
 </html>
