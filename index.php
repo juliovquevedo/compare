@@ -1,8 +1,8 @@
 <?php
-$d1Item1Price = filter_input(INPUT_POST, 'buyoneprice');
-$d1Item2Price = filter_input(INPUT_POST, 'buysecondprice');
-$d1Item1 = filter_input(INPUT_POST, 'itembought');
-$d1Item2 = filter_input(INPUT_POST, 'getthisdeal');
+$d1Item1Price = filter_input(INPUT_POST, 'd1price1');
+$d1Item2Price = filter_input(INPUT_POST, 'd1price2');
+$d1Item1 = filter_input(INPUT_POST, 'd1item1');
+$d1Item2 = filter_input(INPUT_POST, 'd1item2');
 $d1Discount = filter_input(INPUT_POST, 'discount');
 
 $d1TotalPrice = $d1Item1Price * $d1Item1 + $d1Item2Price * $d1Item2;
