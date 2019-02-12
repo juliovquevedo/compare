@@ -1,35 +1,38 @@
 <!doctype htlm>
 <html>
-    <head>
-        <title>Compare Deals</title>
-        <meta charset="utf-8"/>
-    </head>
-    <body>
-        <main>
-            <form oninput="y.value=parseInt(discount.value)" action="index.php" method="post">
-                <fieldset>
-                    <legend>Buy One get One...</legend>
-                    <label>First Item Price</label>
-                    <input type="text" name="d1price1"><br>
-                    <label>Second Item Price</label>
-                    <input type="text" name="d1price2"><br>
-                    <label>Buy</label>
-                    <input type="number" value="1" name="d1item1"><br>
-                    <label>Get</label>
-                    <input type="number" value="1" name="d1item2">
-                    <input name="discount" type="range" min="0" max="100">
-                    <output name="y" for="discount"></output>
-                    <label>% Off</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Percent discount</legend>
-                    <label>Item Price</label>
-                    <input type="text" name="d2price" value="0"><br>
-                    <label>Discount</label>
-                    <input type="number" name="d2percent" value="0">
-                </fieldset>
-                <input type="submit" value="Compare">
-            </form>
-        </main>
-    </body>
+<head>
+    <title>Compare Deals</title>
+    <meta charset="utf-8"/>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main>
+        <form oninput="y.value=parseInt(discount.value)" action="compare.php" method="post">
+        <fieldset>
+            <legend>Buy One get One...</legend>
+            <label>First Item Price</label>
+            <input type="text" name="d1price1"><br>
+            <label>Second Item Price</label>
+            <input type="text" name="d1price2"><br>
+            <label>Buy</label>
+            <input type="number" value="1" name="d1item1"><br>
+            <label>Get</label>
+            <input type="number" value="1" name="d1item2"><br>
+            <input name="discount" type="range" min="0" max="100">
+            <output name="y" for="discount"></output>
+            <label class="left">% Off</label>
+        </fieldset>
+        <fieldset>
+            <legend>Percent discount</legend>
+            <label>Item Price</label>
+            <input type="text" name="d2price" value="0"><br>
+            <label>Discount</label>
+            <input type="text" name="d2percent" value="0">
+            <span>%</span>
+        </fieldset>
+        <input class="button" type="submit" value="Compare">
+        </form>
+    </main>
+</body>
 </html>
