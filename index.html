@@ -19,9 +19,13 @@
             <input type="number" value="1" name="d1item1"><br>
             <label>Get</label>
             <input type="number" value="1" name="d1item2"><br>
+<!--
             <input name="discount" type="range" min="0" max="100">
             <output name="y" for="discount"></output>
-            <label class="left">% Off</label>
+-->
+            <label>Discount</label>
+            <input type="number" name="discount">
+            <label class="left">%</label>
         </fieldset>
         <fieldset>
             <legend>Percent discount</legend>
@@ -29,7 +33,7 @@
             <input type="text" name="d2price" value="0"><br>
             <label>Discount</label>
             <input type="text" name="d2percent" value="0">
-            <span>%</span>
+            <label class="left">%</label>
         </fieldset>
         <input class="button" type="submit" value="Compare">
         </form>
