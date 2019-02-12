@@ -1,0 +1,69 @@
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    color: navy;
+    background-color: #eeeeee;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+form {
+    padding: 1rem;
+}
+
+fieldset {
+    border: none;
+    border-bottom: solid black 1px;
+}
+
+legend {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+label {
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
+
+label.left {
+    display: inline;
+    text-align: left;
+}
+
+input {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5rem;
+    width: 20%;
+    border: none;
+    border-bottom: solid navy 1px;
+    background-color: #dddddd;
+}
+
+input[type="range"] {
+    display: inline-block;
+    width: 39%;
+    margin-left: 10%;
+}
+
+output {
+    font-size: 1.4rem; 
+}
+
+.button {
+    display: block;
+    width: 30%;
+    margin: 1rem auto;
+}
