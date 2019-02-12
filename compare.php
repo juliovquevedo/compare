@@ -25,26 +25,29 @@ $d2Each = ($d2TotalPrice - $d2DiscountAmount) / ($d1Item1 + $d1Item2);
 $d2EachF = number_format($d2Each, 2);
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <title>Compare Deals</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <main>
     <div>
         <h3>First Deal</h3>
-        <p><?php echo "Total Price before discount: $" . $d1TotalPriceF ?></p>
-        <p><?php echo "Discount Amount: $" . $d1DiscountAmountF ?></p>
-        <p><?php echo "You paid $" . $d1EachF . " for each item." ?></p>
-        <p><?php echo "You got " . $d1PercentF . "% off on this deal."?></p>
+        <p><?php echo "Total Price before discount: $" . htmlspecialchars($d1TotalPriceF) ?></p>
+        <p><?php echo "Discount Amount: $" . htmlspecialchars($d1DiscountAmountF) ?></p>
+        <p><?php echo "You paid $" . htmlspecialchars($d1EachF) . " for each item." ?></p>
+        <p><?php echo "You got " . htmlspecialchars($d1PercentF) . "% off on this deal."?></p>
     </div>
     <div>
         <h3>Second Deal</h3>
-        <p><?php echo "Total Price before discount: $" . $d2TotalPriceF ?></p>
-        <p><?php echo "Discount Amount: $" . $d2DiscountAmountF ?></p>
-        <p><?php echo "You paid $" . $d2EachF . " for each item." ?></p>
-        <p><?php echo "You got " . $d2PercentF . "% off on this deal."?></p>
+        <p><?php echo "Total Price before discount: $" . htmlspecialchars($d2TotalPriceF) ?></p>
+        <p><?php echo "Discount Amount: $" . htmlspecialchars($d2DiscountAmountF) ?></p>
+        <p><?php echo "You paid $" . htmlspecialchars($d2EachF) . " for each item." ?></p>
+        <p><?php echo "You got " . htmlspecialchars($d2PercentF) . "% off on this deal."?></p>
     </div>
+    </main>
 </body>
 </html>

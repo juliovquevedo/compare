@@ -4,13 +4,18 @@
 
 body {
     color: navy;
-    background-color: #f8f8f8;
+    background-color: #fafafa;
 }
 
 main {
     width: 100%;
     max-width: 600px;
     margin: auto;
+}
+
+h3, p {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 form {
@@ -50,16 +55,6 @@ input {
     border: none;
     border-bottom: solid navy 1px;
     background-color: #eeeeee;
-}
-
-input[type="range"] {
-    display: inline-block;
-    width: 37%;
-    margin-left: 10%;
-}
-
-output {
-    font-size: 1.4rem; 
 }
 
 .button {
